@@ -1,6 +1,12 @@
-# DNG to JPG Converter
+# Image Converter (DNG / RAW / HEIC → JPG and more)
 
-A simple desktop app (Tkinter) that converts DNG / RAW photos to JPG with automatic exposure, soft highlight roll-off and a gentle contrast curve. Supports drag & drop.
+A simple desktop app (Tkinter) for batch image conversion. Supports drag & drop, folders (with sub-folders), quality and brightness sliders.
+
+**Input:** HEIC, HEIF, AVIF, DNG and other RAW (CR2, CR3, NEF, ARW, RAF, ORF, RW2, PEF, SRW...), JPG, PNG, WEBP, BMP, TIFF, GIF, ICO, TGA, PSD, JP2, PPM
+
+**Output:** JPG, PNG, WEBP, TIFF, BMP, PDF, GIF, ICO, HEIC
+
+RAW files use the camera's embedded full-size preview when available, otherwise they are developed with auto exposure and a soft highlight roll-off. Transparent images are flattened onto white for JPG/BMP/PDF.
 
 ## Setup
 
@@ -20,7 +26,7 @@ python dng_to_jpg.py
 
 ```bash
 pip install pyinstaller
-pyinstaller --onefile --windowed --icon=icon.ico --collect-all tkinterdnd2 dng_to_jpg.py
+pyinstaller --onefile --windowed --icon=icon.ico --collect-all tkinterdnd2 --collect-all pillow_heif dng_to_jpg.py
 ```
 
 ## Update workflow
@@ -35,4 +41,4 @@ git push
 
 ## Requirements
 
-Python 3.8+, `rawpy`, `Pillow`, `numpy`, `tkinterdnd2` (optional, for drag & drop).
+Python 3.8+, `rawpy`, `Pillow`, `numpy`, `pillow-heif` (HEIC/AVIF), `tkinterdnd2` (optional, for drag & drop).

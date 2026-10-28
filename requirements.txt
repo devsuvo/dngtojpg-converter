@@ -2,3 +2,4 @@ rawpy
 Pillow
 numpy
 tkinterdnd2
+pillow-heif
