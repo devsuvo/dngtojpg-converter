@@ -1,0 +1,4 @@
+rawpy
+Pillow
+numpy
+tkinterdnd2
